@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+
+    width:100%;
+    max-width:850px;
+
+    background:rgba(30,41,59,.9);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+h1{
+
+    text-align:center;
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+    margin-bottom:35px;
+
+}
+/* Input */
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:25px;
+    outline:none;
+}
+
+/* Button */
+
+button{
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    display:block;
+
+    margin:auto;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(59,130,246,.4);
+
+}
+
+/* Loading */
+
+#loading{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#93c5fd;
+
+    font-size:18px;
+
+}
+/* Results Grid */
+
+#result{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+/* Individual Card */
+
+.card{
+    background:#334155;
+    border-radius:15px;
+    padding:16px;
+    transition:0.3s;
+    border-left:5px solid #3b82f6;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(59,130,246,.3);
+}
+
+.card b{
+    display:block;
+    font-size:16px;
+    color:#93c5fd;
+    margin-bottom:10px;
+}
+
+.card span{
+    font-size:18px;
+    color:white;
+    font-weight:bold;
+}
