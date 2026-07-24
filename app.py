@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests
 from bs4 import BeautifulSoup
@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return "Page Pulse API is Running!"
+    return render_template("index.html")
 
 
 @app.route('/analyze', methods=['POST'])
